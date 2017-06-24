@@ -8,7 +8,7 @@
 
     <title>My Lean Minimal Template</title>
 
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -23,6 +23,13 @@
                 <h1 class="site-title"><a href="#" rel="home">JoseTreks</a></h1>
             </div>
             <nav class="navigation-main" role="navigation">
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href="javascript:void(0);"><span></span></a>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="javascript:void(0);">Home</a></li>
+                    <li><a href="javascript:void(0);">About</a></li>
+                </ul>
             </nav>
         </div>
         <div class="title-block" role="banner">
@@ -31,8 +38,21 @@
         </div>
     </header>
     
-    <main class="site-content" role="main">
-        
+    <main class="content-area" role="main">
+        <article>
+            <header>
+                <div class="entry-meta">
+                    <span class="posted-on">Posted on <time class="entry-date published">June 24, 2017</time></span>
+                </div>
+                <h1 class="entry-title">Hello World!</h1>
+            </header>
+            <div class="featured-image">
+                <img src="http://placehold.it/782x489" />
+            </div>
+            <div class="entry-content">
+                <p>Lorem ipsum...</p>
+            </div>
+        </article>
     </main>
     
     <footer class="site-footer" role="contentinfo">
