@@ -21,7 +21,7 @@ $semibold               : 500;
 $bold                   : 700;
 
 // Base Font for HTML
-$base-font-size         : 16px;
+$base-font-size         : 17px;
 
 // Layout widths
 $outer-content-width    : 960px;
@@ -29,13 +29,13 @@ $inner-content-width    : 740px;
 $nav-height             : 62px;
 
 // Paragraph Styles
-$paragraph-color        : #383838; // dark grey
+$paragraph-color        : $charcoal;
 $paragraph-size         : 1.063rem; // 17px
 $paragraph-line-height  : 1.5em;
-$paragraph-margin       : 20px;
+$paragraph-margin       : 1.5em;
 
 // Header Styles
-$header-color           : #333333; // dark grey
+$header-color           : $darker-grey; // dark grey
 $header-size            : 2.5rem; // 40px
 $header-line-height     : 1.25em;
 $header-margin          : $paragraph-margin * 1.2;
@@ -52,7 +52,7 @@ $link-color-hover       : darken($link-color, 20%);
 $link-color-active      : darken($link-color, 20%);
 
 // Used in Tables
-$border-color           : #dadada; // light grey
+$border-color           : $off-white-dark; // light grey
 
 // Breakpoints
 $tablet                 : 800px;

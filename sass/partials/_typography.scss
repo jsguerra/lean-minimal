@@ -1,10 +1,10 @@
 // Headers
 h1, h2, h3, h4, h5, h6 {
     font-family: $sans-serif;
-    margin: $header-margin * 1.5 0 $header-margin 0;
+    //margin: $header-margin * 1.5 0 $header-margin 0;
     color: $header-color;
     line-height: $header-line-height;
-    font-weight: 400;
+    font-weight: $normal;
 }
 
 h1, .h1 {
@@ -93,4 +93,47 @@ em, i, .italic {
 
 strong, b, .bold {
     font-weight: $bold;
+}
+
+
+
+/* Drop cap and first line */
+.format-standard:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type:first-letter,
+.page:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type:first-letter,
+.emphasis:first-letter {
+  color: #b7b1a9;
+  display: inline-block;
+  float: left;
+  font-family: $serif;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 40px;
+  margin: 6px 10px 0 -5px;
+}
+
+.format-standard:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type:first-line,
+.page:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type:first-line,
+.emphasis:first-line {
+  color: $darker-grey;
+  font-family: $serif;
+  font-size: 1em;
+  font-style: normal !important; /* Cheat to preserve visual sanity */
+  font-weight: $normal;
+  letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.format-standard:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type::after,
+.page:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type::after,
+.emphasis::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.format-standard:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type + p,
+.page:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type + p,
+.emphasis + p {
+  clear: left;
 }

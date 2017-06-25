@@ -1,21 +1,50 @@
 .site-header {
     .site-branding {
+        max-width: 25%;
+        padding-left: 10px;
+        float: left;
+        
+        a {
+            color: $darker-grey;
+            
+            &:hover {
+                color: black;
+            }
+        }
         
         .site-title {
+            font-size: 2em;
             margin: 0;
         }
     }
     
     .title-block {
-        margin: 4rem auto;
-        max-width: 680px;
+        margin: 3rem auto;
+        max-width: 740px;
         padding: 0;
         width: auto;
         text-align: center;
+        
+        .site-title {
+            margin: 0;
+            color: $darker-grey;
+        }
+        
+        .site-description {
+            font-size: 1.2rem;
+            color: $medium-grey;
+            margin: 0;
+        }
     }
 }
 
 .nav-bar {
-    background-color: white;
+    background-color: $off-white;
+    border-bottom: 1px solid $cream;
+    overflow: auto;
     
+    a {
+        font-family: $sans-serif;
+        text-decoration: none;
+    }
 }
