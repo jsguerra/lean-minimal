@@ -489,8 +489,9 @@ strong, b, .bold {
   font-size: 120px;
   font-style: normal;
   font-weight: 400;
-  line-height: 40px;
-  margin: 32px 10px 10px -5px; }
+  line-height: 100px;
+  margin: 0;
+  padding: 4px 8px 0 3px; }
 
 .format-standard:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type:first-line,
 .page:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type:first-line,

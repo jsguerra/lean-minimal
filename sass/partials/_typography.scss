@@ -117,8 +117,9 @@ strong, b, .bold {
   font-size: 120px;
   font-style: normal;
   font-weight: $normal;
-  line-height: 40px;
-  margin: 32px 10px 10px -5px;
+  line-height: 100px;
+  margin: 0;
+  padding: 4px 8px 0 3px;
 }
 
 .format-standard:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type:first-line,
@@ -130,7 +131,7 @@ strong, b, .bold {
   font-style: normal !important; /* Cheat to preserve visual sanity */
   font-weight: $normal;
   letter-spacing: 2px;
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .format-standard:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type::after,
