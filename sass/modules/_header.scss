@@ -5,7 +5,7 @@
         float: left;
         
         a {
-            color: $darker-grey;
+            color: white;
             
             &:hover {
                 color: black;
@@ -39,8 +39,7 @@
 }
 
 .nav-bar {
-    background-color: $off-white;
-    border-bottom: 1px solid $cream;
+    background-color: $flat-green;
     overflow: auto;
     
     a {

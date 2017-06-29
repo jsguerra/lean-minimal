@@ -88,6 +88,7 @@ blockquote {
     
     cite {
         font-style: normal;
+        display: block;
         
         &:before {
             content: '-- ';
@@ -107,43 +108,33 @@ strong, b, .bold {
 
 
 /* Drop cap and first line */
-.format-standard:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type:first-letter,
-.page:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type:first-letter,
-.emphasis:first-letter {
-  color: #b7b1a9;
-  display: inline-block;
-  float: left;
-  font-family: $serif;
-  font-size: 120px;
-  font-style: normal;
-  font-weight: $normal;
-  line-height: 100px;
-  margin: 0;
-  padding: 4px 8px 0 3px;
+article p:first-child:first-letter {
+    color: #b7b1a9;
+    float: left;
+    font-family: $serif;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
 }
 
-.format-standard:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type:first-line,
-.page:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type:first-line,
-.emphasis:first-line {
-  color: $darker-grey;
-  font-family: $serif;
-  font-size: 1em;
-  font-style: normal !important; /* Cheat to preserve visual sanity */
-  font-weight: $normal;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+article p:first-of-type:first-line {
+    color: #787065;
+    font-family: $serif;
+    font-size: 1em;
+    font-style: normal !important; /* Cheat to preserve visual sanity */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.format-standard:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type::after,
-.page:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type::after,
-.emphasis::after {
-  clear: both;
-  content: "";
-  display: block;
+article p:first-of-type::after {
+    clear: both;
+    content: "";
+    display: block;
 }
 
-.format-standard:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type + p,
-.page:not(.post-password-required) .entry-content > p:not(.no-emphasis):first-of-type + p,
-.emphasis + p {
-  clear: left;
+article p:first-of-type + p {
+    clear: left;
 }
