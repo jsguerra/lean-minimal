@@ -108,7 +108,7 @@ strong, b, .bold {
 
 
 /* Drop cap and first line */
-.drop-cap p:first-child:first-letter {
+.entry-content > p:first-of-type:first-letter {
     color: #b7b1a9;
     float: left;
     font-family: $serif;
@@ -119,7 +119,7 @@ strong, b, .bold {
     padding-left: 3px;
 }
 
-.drop-cap p:first-of-type:first-line {
+.entry-content > p:first-of-type:first-line {
     color: #787065;
     font-family: $serif;
     font-size: 1em;
@@ -129,12 +129,12 @@ strong, b, .bold {
     text-transform: uppercase;
 }
 
-.drop-cap p:first-of-type::after {
+.entry-content > p:first-of-type::after {
     clear: both;
     content: "";
     display: block;
 }
 
-.drop-cap p:first-of-type + p {
+p:first-of-type + p {
     clear: left;
 }
