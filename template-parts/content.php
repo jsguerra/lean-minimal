@@ -1,5 +1,5 @@
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('drop-cap'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
 
         <?php if ( 'post' === get_post_type() ) : ?>
