@@ -1,7 +1,21 @@
+.footer-links {
+    text-align: center;
+    margin-top: 1rem;
+    
+    a {
+        color: $medium-grey;
+        padding: 6px 8px;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 .site-info {
     font-size: 14px;
     color: $darker-grey;
-    margin: 1rem auto;
+    margin: 0.5rem auto 1rem;
     max-width: 680px;
     padding: 0;
     width: auto;

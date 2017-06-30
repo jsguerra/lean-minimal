@@ -29,20 +29,23 @@
                     <div class="nav-mobile">
                         <a id="nav-toggle" href="javascript:void(0);"><span></span></a>
                     </div>
-                    <ul class="nav-list">
-                        <li><a href="javascript:void(0);">Home</a></li>
-                        <li><a href="page.html">About</a></li>
-                        <li><a href="javascript:void(0);">London Life</a></li>
-                        <li><a href="javascript:void(0);">Places</a></li>
-                        <li><a href="javascript:void(0);">Contact</a></li>
-                    </ul>
+                    <?php
+                        wp_nav_menu(array(
+                            'menu_class' => 'nav-list',
+                            'depth' => 1
+                        ));
+                    ?>
                 </nav>
             </div>
         </div>
+        <?php if(is_singular()):
+            // Don't display title
+        else: ?>
         <div class="title-block" role="banner">
             <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
             <p class="site-description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
         </div>
+        <?php endif; ?>
     </header>
     
     <main class="content-area" role="main">
@@ -70,6 +73,7 @@
     </main>
     
     <footer class="site-footer" role="contentinfo">
+        <div class="footer-links"><a href="#">Cookies</a> <a href="#">Sitemap</a></div>
         <div class="site-info">&copy; <?php echo date('Y'); ?> Copyright all rights reserved.</div>
     </footer>
 

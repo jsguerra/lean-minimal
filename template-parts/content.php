@@ -9,7 +9,7 @@
         <?php endif; ?>
 
         <?php
-            if ( is_single() ) :
+            if ( is_single() || is_page() ) :
                 the_title( '<h1 class="entry-title">', '</h1>' );
             else :
                 the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
@@ -23,6 +23,9 @@
     <?php } ?>
     <div class="entry-content">
 		<?php
+        
+            if( is_singular() ):
+            
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
 				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'leanMinimal' ),
@@ -37,6 +40,12 @@
 				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'leanMinimal' ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
+        
+            else:
+        
+            the_excerpt();
+        
+            endif;
 		?>
     </div>
 	<footer class="entry-footer">
@@ -55,3 +64,17 @@
 </article>
 
 
+<?php
+    if( is_single() ): ?>
+        <section class="comments shadow-box">
+            <?php
+                if ( comments_open() || get_comments_number() ) :
+                    comments_template();
+                endif;
+            ?>
+        </section>
+<?php
+    else:
+        // No comments
+    endif;
+?>

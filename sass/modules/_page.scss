@@ -1,12 +1,12 @@
-.page {
+.type-page {
     background-color: $off-white;
     -webkit-box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.05);
     -moz-box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.05);
     box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.05);
-    padding: 3em 3em 3em;
+    padding: 0;
 
     .entry-header {
-        padding: 3em 3em 0;
+        padding: 3em 3em 0.5em 3em;
         text-align: center;
         
         .entry-meta {
@@ -14,7 +14,7 @@
         }
         
         .entry-title {
-            font-family: $serif;
+            font-family: $sans-serif;
             margin-top: 0;
             color: $darker-grey;
             
@@ -32,11 +32,6 @@
     
     .entry-content {
         padding: 0 3em 1em;
-        
-        p {
-            font-size: 20px;
-            line-height: 1.618;
-        }
     }
     
     .entry-footer {

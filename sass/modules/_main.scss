@@ -96,19 +96,21 @@
 
 /* In-page or in-post navigation */
 .pagination {
+    float: none;
     margin-top: 2rem;
     overflow: auto;
     
-    .previous {
-        float: left;
-        width: 50%;
-        text-align: left;
-    }
-
-    .next {
-        float: right;
-        width: 50%;
-        text-align: right;
+    .nav-links {
+        text-align: center;
+        
+        .page-numbers {
+            margin-left: .25em;
+            margin-right: .25em;
+        }
+        
+        a {
+            font-size: 14px;
+        }
     }
     
     a {
@@ -119,17 +121,11 @@
         &:hover {
             color: $link-color;
         }
-        
-        .meta-nav {
-            font-size: 14px;
-        }
     }
 }
 
-.previous .meta-nav a:before,
-.next .meta-nav a:after,
-.previous a .meta-nav:before,
-.next a .meta-nav:after {
+.prev:before,
+.next:after {
   border: solid transparent 4px;
   content: "";
   display: inline-block;
@@ -139,14 +135,12 @@
   width: 0;
 }
 
-.previous .meta-nav a:before,
-.previous a .meta-nav:before {
+.prev:before {
   border-left: 0;
   border-right-color: $medium-grey;
 }
 
-.next .meta-nav a:after,
-.next a .meta-nav:after {
+.next:after {
   border-left-color: $medium-grey;
   border-right: 0;
 }
