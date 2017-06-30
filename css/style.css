@@ -570,7 +570,7 @@ th, td {
     background-clip: padding-box;
     margin: 0 35px 0 0; }
   .comment-body .comment-content {
-    margin-left: 50px;
+    margin-left: 90px;
     padding: 0 18px 18px 18px;
     position: relative; }
   .comment-body .reply {
@@ -1106,7 +1106,7 @@ article + article {
   margin-top: 6rem; }
 
 .type-page {
-  background-color: #faf9f5;
+  background-color: white;
   -webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.05);
@@ -1150,6 +1150,26 @@ article + article {
   margin-right: 1rem; }
   .cat-links a, .tag-links a {
     font-style: italic; }
+
+.author-info h4 {
+  border-bottom: 1px solid #eae9e6; }
+.author-info .author-avatar {
+  float: left; }
+  .author-info .author-avatar .avatar {
+    margin-top: 0;
+    float: left;
+    max-width: 72px;
+    max-height: 72px;
+    display: block;
+    -webkit-border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 50%;
+    -moz-background-clip: padding;
+    border-radius: 50%;
+    background-clip: padding-box;
+    margin: 0 35px 0 0; }
+.author-info .author-description {
+  margin-left: 90px; }
 
 .footer-links {
   text-align: center;

@@ -4,7 +4,10 @@
 
         <?php if ( 'post' === get_post_type() ) : ?>
         <div class="entry-meta">
-            <span class="posted-on">Posted on <time class="entry-date published">June 24, 2017</time></span>
+            <span class="posted-on"><time class="entry-date published updated"><?php the_time('F jS, Y') ?></time>,</span>
+            <?php if(is_single()): ?>
+                <span class="author vcard">Written by <?php the_author(); ?></span>
+            <?php endif; ?>
         </div>
         <?php endif; ?>
 
@@ -18,8 +21,23 @@
     </header>
     <?php if ( has_post_thumbnail() ) { ?>
     <div class="featured-image">
-        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+        <?php if(is_single()): ?>
+            <?php the_post_thumbnail(); ?>
+        <?php elseif(is_page()):
+            // Don't display on pages
+        else: ?>
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+        <?php endif; ?>
     </div>
+    <?php } else { ?>
+        <?php if(is_single()): ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/default.jpg" alt="<?php the_title(); ?>" />
+        <?php 
+            elseif(is_page()):
+                  //Don't display on pages
+            else: ?>
+            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/default.jpg" alt="<?php the_title(); ?>" /></a>
+        <?php endif; ?>
     <?php } ?>
     <div class="entry-content">
 		<?php
@@ -85,6 +103,35 @@
 	</footer><!-- .entry-footer -->
     <?php endif; ?>
 </article>
+
+<?php
+// Get Author Data
+$author             = get_the_author();
+$author_description = get_the_author_meta( 'description' );
+$author_avatar      = get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'leanMinimal_author_bio_avatar_size', 75 ) );
+
+// Only display if author has a description
+if ( $author_description && is_single() ) : ?>
+
+    <section class="shadow-box">
+        <div class="author-info clr">
+            <h4 ><?php printf( esc_html__( 'Author: %s', 'leanMinimal' ), esc_html( $author ) ); ?></h4>
+            <div class="author-info-inner clr">
+                <?php if ( $author_avatar ) { ?>
+                    <div class="author-avatar clr">
+                        <a href="<?php echo esc_url( $author_url ); ?>" rel="author">
+                            <?php echo $author_avatar; ?>
+                        </a>
+                    </div><!-- .author-avatar -->
+                <?php } ?>
+                <div class="author-description">
+                    <p><?php echo wp_kses_post( $author_description ); ?></p>
+                </div><!-- .author-description -->
+            </div><!-- .author-info-inner -->
+        </div><!-- .author-info -->
+    </section>
+
+<?php endif; ?>
 
 <?php
     if( is_single() ): ?>

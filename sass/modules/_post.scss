@@ -25,3 +25,33 @@
 .tag-links {
     @extend .cat-links;
 }
+
+.author-info {
+    
+    h4 {
+        border-bottom: 1px solid $cream;
+    }
+    
+    .author-avatar {
+        float: left;
+        
+        .avatar {
+            margin-top: 0;
+            float: left;
+            max-width: 72px;
+            max-height: 72px;
+            display: block;
+            -webkit-border-radius: 50%;
+            -webkit-background-clip: padding-box;
+            -moz-border-radius: 50%;
+            -moz-background-clip: padding;
+            border-radius: 50%;
+            background-clip: padding-box;
+            margin: 0 35px 0 0;
+        }
+    }
+    
+    .author-description {
+        margin-left: 90px;
+    }
+}
