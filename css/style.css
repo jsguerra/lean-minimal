@@ -1029,9 +1029,6 @@ nav {
     .post .entry-content p {
       font-size: 20px;
       line-height: 1.618; }
-  .post .entry-footer {
-    color: #a09a92;
-    padding: 0 3em 3em; }
 
 /* "Read more" link */
 .more-link {
@@ -1142,6 +1139,17 @@ article + article {
   -webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.05); }
+
+.entry-footer {
+  font-size: 14px;
+  border-top: 1px solid #eae9e6;
+  color: #a09a92;
+  padding: 2em 3em; }
+
+.cat-links, .tag-links {
+  margin-right: 1rem; }
+  .cat-links a, .tag-links a {
+    font-style: italic; }
 
 .footer-links {
   text-align: center;

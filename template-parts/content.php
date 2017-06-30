@@ -45,11 +45,33 @@
         
             the_excerpt();
         
+            echo '<a class="more-link" href="'. get_permalink($post->ID) . '">' . 'Read More' . '</a>';
+        
             endif;
 		?>
     </div>
+    <?php if(is_single()): ?>
 	<footer class="entry-footer">
 		<?php
+        
+            $categories = get_the_category();
+            $separator = ', ';
+            $output = '';
+
+            echo '<span class="cat-links">';
+        
+            if ( ! empty( $categories ) ) {
+                foreach( $categories as $category ) {
+                    $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+                }
+                echo 'Filed under: '.trim( $output, $separator );
+            }
+            echo '</span>';
+        
+            echo '<span class="tag-links">';
+            the_tags( 'Tags: ',' , ' );
+            echo '</span>';
+
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
@@ -61,8 +83,8 @@
 			);
 		?>
 	</footer><!-- .entry-footer -->
+    <?php endif; ?>
 </article>
-
 
 <?php
     if( is_single() ): ?>
