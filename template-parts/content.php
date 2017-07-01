@@ -6,7 +6,7 @@
         <div class="entry-meta">
             <span class="posted-on"><time class="entry-date published updated"><?php the_time('F jS, Y') ?></time>,</span>
             <?php if(is_single()): ?>
-                <span class="author vcard">Written by <?php the_author(); ?></span>
+                <span class="author vcard">written by <?php the_author(); ?></span>
             <?php endif; ?>
         </div>
         <?php endif; ?>

@@ -1,4 +1,8 @@
 <?php
+
+    /**
+     * Theme setup and support
+     */
     if ( ! function_exists( 'leanMinimal_setup' ) ) :
     function leanMinimal_setup() {
 
@@ -26,6 +30,9 @@
     endif;
     add_action( 'after_setup_theme', 'leanMinimal_setup' );
     
+    /**
+     * Register navbars
+     */
     register_nav_menu( 'primary', __( 'Primary Menu', 'leanMinimal' ) );
     register_nav_menu( 'secondary', __( 'Footer Menu', 'leanMinimal' ) );
     register_nav_menu( 'tertiary', __( 'Social Footer Menu', 'leanMinimal' ) );
@@ -43,3 +50,11 @@
         }
     }
     add_action( 'wp_enqueue_scripts', 'leanMinimal_scripts' );
+
+    /**
+     * Remove the brackets and ellipsis from more link
+     */
+    function new_excerpt_more( $more ) {
+        return '';
+    }
+    add_filter('excerpt_more', 'new_excerpt_more');

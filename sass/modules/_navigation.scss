@@ -20,7 +20,7 @@ nav {
         text-decoration: none;
           
         &:hover {
-            background: $flat-blue-hover;
+            background: $flat-green-hover;
             color: white;
         }
       }
@@ -205,7 +205,7 @@ nav {
     
     .icon {
         background-color: white;
-        color: $flat-green;
+        color: $flat-green-hover;
         padding: 6px;
         -webkit-border-radius: 50px;
         -moz-border-radius: 50px;

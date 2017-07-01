@@ -84,12 +84,12 @@ input[type="search"] {
 
 input[type="submit"] {
     font-size: 14px;
-    background-color: $flat-blue;
+    background-color: $flat-green-hover;
     color: white;
     border: none;
     
     &:hover {
-        background-color: $flat-blue-hover;
+        background-color: $flat-green;
     }
 }
 

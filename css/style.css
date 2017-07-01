@@ -729,11 +729,11 @@ input[type="search"] {
 
 input[type="submit"] {
   font-size: 14px;
-  background-color: #3498db;
+  background-color: #16a085;
   color: white;
   border: none; }
   input[type="submit"]:hover {
-    background-color: #2980b9; }
+    background-color: #1abc9c; }
 
 textarea {
   width: 94%;
@@ -933,7 +933,7 @@ a img.aligncenter {
     margin: 0; }
 
 .nav-bar {
-  background-color: #3498db;
+  background-color: #1abc9c;
   overflow: auto; }
   .nav-bar a {
     font-family: Verdana, Geneva, sans-serif;
@@ -957,7 +957,7 @@ nav {
         color: white;
         text-decoration: none; }
         nav ul li a:hover {
-          background: #2980b9;
+          background: #16a085;
           color: white; }
       nav ul li ul li {
         min-width: 190px; }
@@ -1077,7 +1077,7 @@ nav {
   text-decoration: none; }
 .nav-social .icon {
   background-color: white;
-  color: #1abc9c;
+  color: #16a085;
   padding: 6px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -1103,7 +1103,8 @@ nav {
     padding: 3em 3em 0;
     text-align: center; }
     .post .entry-header .entry-meta {
-      color: #a09a92; }
+      color: #a09a92;
+      margin-bottom: 0.5rem; }
     .post .entry-header .entry-title {
       font-family: Georgia, serif;
       margin-top: 0;
@@ -1207,7 +1208,7 @@ article + article {
     .type-page .entry-header .entry-meta {
       color: #a09a92; }
     .type-page .entry-header .entry-title {
-      font-family: Verdana, Geneva, sans-serif;
+      font-family: Georgia, serif;
       margin-top: 0;
       color: #787065; }
       .type-page .entry-header .entry-title a {
@@ -1268,7 +1269,7 @@ article + article {
   margin-left: 90px; }
 
 .footer-link-wrapper {
-  background-color: #1abc9c;
+  background-color: #16a085;
   padding: 1rem 0; }
 
 .footer-links {
