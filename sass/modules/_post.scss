@@ -26,10 +26,19 @@
     @extend .cat-links;
 }
 
+.edit-link {
+    margin: 0 0.5rem;
+    
+    a {
+        font-size: 14px;
+    }
+}
+
 .author-info {
     
     h4 {
         border-bottom: 1px solid $cream;
+        padding-bottom: 0.25rem;
     }
     
     .author-avatar {

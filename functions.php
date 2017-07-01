@@ -25,6 +25,10 @@
     }
     endif;
     add_action( 'after_setup_theme', 'leanMinimal_setup' );
+    
+    register_nav_menu( 'primary', __( 'Primary Menu', 'leanMinimal' ) );
+    register_nav_menu( 'secondary', __( 'Footer Menu', 'leanMinimal' ) );
+    register_nav_menu( 'tertiary', __( 'Social Footer Menu', 'leanMinimal' ) );
 
     /**
      * Enqueue scripts and styles.

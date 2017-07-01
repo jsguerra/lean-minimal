@@ -20,8 +20,8 @@ nav {
         text-decoration: none;
           
         &:hover {
-          background: $clouds;
-          color: black;
+            background: $flat-blue-hover;
+            color: white;
         }
       }
         
@@ -172,4 +172,50 @@ nav {
     color: white;
     text-decoration: none;
   }
+}
+
+.nav-footer {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+    
+    li {
+        display: inline;
+        list-style-type: none;
+        list-style-image: none;
+        
+        a {
+            color: white;
+        }
+    }
+}
+
+.nav-social {
+    
+    li {
+        
+        a {
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    
+    .icon {
+        background-color: white;
+        color: $flat-green;
+        padding: 6px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        font-size: 24px;
+
+        &:hover {
+            background-color: darken($flat-green, 20%);
+            color: white;
+            text-decoration: none!important;
+        }
+    }
 }

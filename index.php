@@ -31,8 +31,9 @@
                     </div>
                     <?php
                         wp_nav_menu(array(
-                            'menu_class' => 'nav-list',
-                            'depth' => 1
+                            'theme_location'    => 'primary',
+                            'menu_class'        => 'nav-list',
+                            'depth'             => 1
                         ));
                     ?>
                 </nav>
@@ -73,7 +74,10 @@
     </main>
     
     <footer class="site-footer" role="contentinfo">
-        <div class="footer-links"><a href="#">Cookies</a> <a href="#">Sitemap</a></div>
+        <div class="footer-link-wrapper">
+            <div class="footer-links"><?php wp_nav_menu(array('menu_class' => 'nav-footer nav-social', 'theme_location' => 'tertiary','fallback_cb' => false)); ?></div>
+            <div class="footer-links"><?php wp_nav_menu(array('menu_class' => 'nav-footer nav-footer-links', 'theme_location' => 'secondary', 'fallback_cb' => false)); ?></div>
+        </div>
         <div class="site-info">&copy; <?php echo date('Y'); ?> Copyright all rights reserved.</div>
     </footer>
 
