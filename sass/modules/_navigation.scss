@@ -20,7 +20,7 @@ nav {
         text-decoration: none;
           
         &:hover {
-            background: $flat-green-hover;
+            background: $carrot; // $flat-green-hover
             color: white;
         }
       }
@@ -50,7 +50,7 @@ nav {
   position: absolute;
   top: 0;
   right: 0;
-  background: $clouds;
+  background: $carrot; // $clouds
   height: $nav-height;
   width: $nav-height;
 }
@@ -69,7 +69,7 @@ nav {
     border-radius: 1px;
     height: 5px;
     width: 35px;
-    background: $darker-grey;
+    background: white; // $darker-grey
     position: absolute;
     display: block;
     content: '';
