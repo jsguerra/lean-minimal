@@ -1077,14 +1077,14 @@ nav {
   text-decoration: none; }
 .nav-social .icon {
   background-color: white;
-  color: #16a085;
+  color: #f39c12;
   padding: 6px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
   font-size: 24px; }
   .nav-social .icon:hover {
-    background-color: #0e6252;
+    background-color: #e67e22;
     color: white;
     text-decoration: none !important; }
 
