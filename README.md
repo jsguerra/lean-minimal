@@ -6,5 +6,7 @@ This is a design concept using a very minimal design with lean coding. The goal 
 
 No task runners have been setup on this project. Initially used Sass --watch from terminal to watch and compile css.
 
+View Demo: https://sharp-kirch-ac73d9.netlify.com/
+
 ## Branches
 There is currently a master branch with an HTML5 site and a dev branch with a WordPress version.
