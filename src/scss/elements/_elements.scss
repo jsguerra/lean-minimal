@@ -42,13 +42,13 @@ strong, b, .bold {
 }
 
 .drop-cap p:first-of-type:first-line {
-  color: #787065;
-  font-family: $serif;
-  font-size: 1em;
-  font-style: normal !important; /* Cheat to preserve visual sanity */
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  // color: #787065;
+  // font-family: $serif;
+  // font-size: 1em;
+  // font-style: normal !important; /* Cheat to preserve visual sanity */
+  // font-weight: bold;
+  // letter-spacing: 2px;
+  // text-transform: uppercase;
 }
 
 .drop-cap p:first-of-type::after {
