@@ -1,4 +1,13 @@
+/*!
+ * gco-gulp-boilerplate
+ * Fiercely quick and opinionated front-ends
+ * 
+ * @author Jose Guerra
+ * @version 2.0.0
+ * Copyright 2018. MIT licensed.
+ */
 (function($) {
+  //comment
   $(function() {
     $('nav ul li > a:not(:only-child)').click(function(e) {
       $(this).siblings('.nav-dropdown').slideToggle();
