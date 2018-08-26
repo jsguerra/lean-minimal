@@ -1,19 +1,33 @@
-/* Vendor            */
+// Reset via Normalize
+// ================================
 @import "vendor/normalize";
 
-/* Partials          */
-@import 'partials/variables';
-@import 'partials/typography';
-@import 'partials/elements';
-@import 'partials/comments';
-@import 'partials/forms';
-@import 'partials/defaults';
-@import 'partials/mixins';
+// Utilities, mixins and functions
+// ================================
+@import 'utility/variables',
+        'utility/mixins';
 
-/* Modules           */
-@import 'modules/header';
-@import 'modules/navigation';
-@import 'modules/main';
-@import 'modules/page';
-@import 'modules/post';
-@import 'modules/footer';
+// Site Defaults
+// ================================
+@import 'site-defaults';
+
+// Elements
+// ================================
+@import 'elements/accessibility',
+        'elements/alignments',
+        'elements/elements',
+        'elements/forms',
+        'elements/headings',
+        'elements/images',
+        'elements/links',
+        'elements/lists',
+        'elements/tables';
+
+// Layout
+// ================================
+@import 'layout/header',
+        'layout/navigation',
+        'layout/main',
+        'layout/page',
+        'layout/post',
+        'layout/footer';
