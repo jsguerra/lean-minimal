@@ -1,49 +1,22 @@
 .site-header {
-  .site-branding {
-    max-width: 25%;
-    padding-left: 10px;
-    float: left;
-    
-    a {
-      color: white;
-      
-      &:hover {
-        color: black;
-      }
-    }
-    
-    .site-title {
-      font-size: 2.2em;
-      margin: 0;
-    }
-  }
-  
-  .title-block {
-    margin: 3rem auto;
-    max-width: 740px;
-    padding: 0;
-    width: auto;
-    text-align: center;
-    
-    .site-title {
-      margin: 0;
-      color: $darker-grey;
-    }
-    
-    .site-description {
-      font-size: 1.2rem;
-      color: $medium-grey;
-      margin: 0;
-    }
-  }
-}
-
-.nav-bar {
+  display: flex;
+  align-items: center;
+  height: 50px;
   background-color: $flat-green;
-  overflow: auto;
-  
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
   a {
-    font-family: $sans-serif;
+    color: white;
     text-decoration: none;
+  }
+
+  .site-title {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 auto 0 0;
   }
 }
