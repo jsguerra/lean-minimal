@@ -4,3 +4,58 @@
     display: none;
   }
 }
+
+.hamburger {
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 0;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  text-transform: none;
+  color: white;
+  background-color: transparent;
+
+  .hamburger-box {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+  }
+
+  .hamburger-inner {
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    text-indent: -9999px;
+
+    &::before {
+      content: '';
+      display: block;
+      background-color: white;
+      position: absolute;
+      top: 20px;
+      width: 40px;
+      height: 4px;
+      border-radius: 4px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      background-color: white;
+      position: absolute;
+      top: 10px;
+      width: 40px;
+      height: 4px;
+      border-radius: 4px;
+    }
+  }
+}
