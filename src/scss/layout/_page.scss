@@ -1,0 +1,46 @@
+.page {
+  background-color: $off-white;
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.05);
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.05);
+  padding: 3em 3em 3em;
+
+  .entry-header {
+    padding: 3em 3em 0;
+    text-align: center;
+    
+    .entry-meta {
+      color: $medium-grey;
+    }
+    
+    .entry-title {
+      font-family: $serif;
+      margin-top: 0;
+      color: $darker-grey;
+      
+      a {
+        font-size: $header-size;
+        color: $darker-grey;
+        text-decoration: none;
+        
+        &:hover {
+          color: $link-color;
+        }
+      }
+    }
+  }
+  
+  .entry-content {
+    padding: 0 3em 1em;
+    
+    p {
+      font-size: 20px;
+      line-height: 1.618;
+    }
+  }
+  
+  .entry-footer {
+    color: $medium-grey;
+    padding: 0 3em 3em;
+  }
+}

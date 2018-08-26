@@ -1,0 +1,62 @@
+// Blockquote
+blockquote {
+  margin: $blockquote-margin 0;
+  font-size: $blockquote-size;
+  line-height: $blockquote-line-height;
+  color: $blockquote-color;
+  text-align: left;
+  font-style: italic;
+  padding-left: 2em;
+  
+  cite {
+    font-style: normal;
+    display: block;
+    
+    &:before {
+      content: '-- ';
+    }
+  }
+}
+
+// Misc Styles
+em, i, .italic {
+  font-style: italic;
+}
+
+strong, b, .bold {
+  font-weight: $bold;
+}
+
+
+
+/* Drop cap and first line */
+.drop-cap p:first-child:first-letter {
+  color: #b7b1a9;
+  float: left;
+  font-family: $serif;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
+.drop-cap p:first-of-type:first-line {
+  color: #787065;
+  font-family: $serif;
+  font-size: 1em;
+  font-style: normal !important; /* Cheat to preserve visual sanity */
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.drop-cap p:first-of-type::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.drop-cap p:first-of-type + p {
+  clear: left;
+}
