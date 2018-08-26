@@ -1,0 +1,140 @@
+// Headers
+h1, h2, h3, h4, h5, h6 {
+    font-family: $sans-serif;
+    //margin: $header-margin * 1.5 0 $header-margin 0;
+    color: $header-color;
+    line-height: $header-line-height;
+    font-weight: $normal;
+}
+
+h1, .h1 {
+    font-size: $header-size;
+}
+
+h2, .h2 {
+    font-size: $header-size / 1.3;
+}
+
+h3, .h3 {
+    font-size: $header-size / 1.5;
+}
+
+h4, .h4 {
+    font-size: $header-size / 1.7;
+}
+
+h5, .h5 {
+    font-size: $header-size / 1.8;
+}
+
+h6, .h6 {
+    font-size: $header-size / 2;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 { font-family: $serif; font-weight: $bold; }
+.h1, .h2 { line-height: 1.1; }
+.h3, .h4 { line-height: 1.3; }
+.h1 { font-size: 400%; letter-spacing: -2px; }
+.h2 { font-size: 250%; letter-spacing: -1px; }
+.h3 { font-size: 200%; }
+.h4 { font-size: 180%; }
+.h5 { font-size: 130%; }
+
+// Lists
+ul, ol {
+    margin: $paragraph-margin 0 0 20px;
+
+    li {
+        margin-top: 10px;
+        line-height: $paragraph-line-height;
+        color: $paragraph-color;
+    }
+
+    ul, ol {
+        margin-top: 0;
+    }
+}
+
+ul {
+
+    li {
+        list-style: disc;
+    }
+
+    ul {
+
+        li {
+            list-style: circle;
+        }
+    }
+}
+
+ol {
+
+    li {
+        list-style: decimal;
+    }
+}
+
+// Blockquote
+blockquote {
+    margin: $blockquote-margin 0;
+    font-size: $blockquote-size;
+    line-height: $blockquote-line-height;
+    color: $blockquote-color;
+    text-align: left;
+    font-style: italic;
+    padding-left: 2em;
+    
+    cite {
+        font-style: normal;
+        display: block;
+        
+        &:before {
+            content: '-- ';
+        }
+    }
+}
+
+// Misc Styles
+em, i, .italic {
+    font-style: italic;
+}
+
+strong, b, .bold {
+    font-weight: $bold;
+}
+
+
+
+/* Drop cap and first line */
+.drop-cap p:first-child:first-letter {
+    color: #b7b1a9;
+    float: left;
+    font-family: $serif;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+.drop-cap p:first-of-type:first-line {
+    color: #787065;
+    font-family: $serif;
+    font-size: 1em;
+    font-style: normal !important; /* Cheat to preserve visual sanity */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.drop-cap p:first-of-type::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.drop-cap p:first-of-type + p {
+    clear: left;
+}
