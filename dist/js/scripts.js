@@ -8,5 +8,12 @@
  */
 (function (window, document, undefined) {
   'use strict';
-  // Type your code here
+  
+  const burger = document.querySelector('.hamburger');
+
+  burger.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    this.classList.toggle('is-active');
+  });
 })(window, document);
