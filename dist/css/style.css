@@ -273,6 +273,14 @@ template {
   display: none !important; }
 
 /*# sourceMappingURL=bootstrap-reboot.css.map */
+/*! helpers - functions v0.0.1 */
+/*! helpers - utility v0.0.1 */
+.compartment {
+  position: relative;
+  margin: 0 auto;
+  max-width: 64.70588em;
+  max-width: 68.75rem; }
+
 *, html, body {
   font-size: 17px;
   font-family: Georgia, serif;
@@ -741,35 +749,32 @@ th, td {
   .hamburger .hamburger-box {
     position: relative;
     display: inline-block;
-    width: 40px;
-    height: 24px; }
+    width: 1.5625rem;
+    height: 1.25rem; }
   .hamburger .hamburger-inner {
     background-color: white;
     position: absolute;
-    top: 2px;
+    top: 4px;
     left: 0;
-    width: 40px;
-    height: 4px;
-    border-radius: 4px;
+    width: 1.5625rem;
+    height: 0.125rem;
     text-indent: -9999px; }
     .hamburger .hamburger-inner::before {
       content: '';
       display: block;
       background-color: white;
       position: absolute;
-      top: 20px;
-      width: 40px;
-      height: 4px;
-      border-radius: 4px; }
+      top: 16px;
+      width: 1.5625rem;
+      height: 0.125rem; }
     .hamburger .hamburger-inner::after {
       content: '';
       display: block;
       background-color: white;
       position: absolute;
-      top: 10px;
-      width: 40px;
-      height: 4px;
-      border-radius: 4px; }
+      top: 8px;
+      width: 1.5625rem;
+      height: 0.125rem; }
 
 .content-area {
   margin: 5rem auto 3rem;

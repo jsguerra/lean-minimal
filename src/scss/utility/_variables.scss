@@ -23,6 +23,7 @@ $bold                   : 700;
 
 // Base Font for HTML
 $base-font-size         : 17px;
+$body-font-size         : 17px;
 
 // Layout widths
 $outer-content-width    : 960px;
@@ -56,5 +57,6 @@ $link-color-active      : darken($link-color, 20%);
 $border-color           : $off-white-dark; // light grey
 
 // Breakpoints
+$boundry                : 1100px;
 $tablet                 : 800px;
 $phone                  : 640px;
