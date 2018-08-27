@@ -34,6 +34,9 @@
     width: cre(25);
     height: cre(2);
     text-indent: -9999px;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    transition-property: transform;
 
     &::before {
       content: '';
@@ -43,6 +46,9 @@
       top: 16px;
       width: cre(25);
       height: cre(2);
+      transition-timing-function: ease;
+      transition-duration: 0.15s;
+      transition-property: transform, opacity;
     }
 
     &::after {
@@ -53,6 +59,25 @@
       top: 8px;
       width: cre(25);
       height: cre(2);
+      transition-timing-function: ease;
+      transition-duration: 0.15s;
+      transition-property: transform;
+    }
+  }
+}
+
+.is-active {
+
+  .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+
+    &::before {
+      transform: rotate(-45deg) translate3d(-2.71429px, -4px, 0);
+      opacity: 0;
+    }
+
+    &::after {
+      transform: translate3d(0, -8px, 0) rotate(-90deg);
     }
   }
 }
