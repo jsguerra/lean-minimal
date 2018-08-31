@@ -104,3 +104,49 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+// Close Button
+// ========================
+.close {
+  position: absolute;
+  top: cre(10);
+  right: cre(10);
+  background-color: transparent;
+  border: 0;
+  width: cre(40);
+  height: cre(40);
+  cursor: pointer;
+
+  .close-box {
+    display: inline-block;
+  }
+
+  .close-inner {
+    display: inline-block;
+    text-indent: -9999px;
+
+    &::before {
+      content: '';
+      display: block;
+      background-color: white;
+      width: cre(25);
+      height: cre(2);
+      transform: rotate(45deg);
+      position: absolute;
+      top: cre(18);
+      right: cre(8);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      background-color: white;
+      width: cre(25);
+      height: cre(2);
+      transform: rotate(-45deg);
+      position: absolute;
+      top: cre(18);
+      right: cre(8);
+    }
+  }
+}
