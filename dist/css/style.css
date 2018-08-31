@@ -808,6 +808,43 @@ th, td {
 .is-open.mobile-nav {
   transform: translate3d(0, 0, 0); }
 
+.close {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  background-color: transparent;
+  border: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer; }
+  .close .close-box {
+    display: inline-block; }
+  .close .close-inner {
+    display: inline-block;
+    text-indent: -9999px; }
+    .close .close-inner::before {
+      content: '';
+      display: block;
+      background-color: white;
+      width: 1.5625rem;
+      height: 0.125rem;
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+      position: absolute;
+      top: 1.125rem;
+      right: 0.5rem; }
+    .close .close-inner::after {
+      content: '';
+      display: block;
+      background-color: white;
+      width: 1.5625rem;
+      height: 0.125rem;
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+      position: absolute;
+      top: 1.125rem;
+      right: 0.5rem; }
+
 .content-area {
   margin: 5rem auto 3rem;
   max-width: 740px;

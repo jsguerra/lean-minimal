@@ -10,7 +10,8 @@
   'use strict';
   
   const burger = document.querySelector('.hamburger'),
-        mobileMenu = document.querySelector('.mobile-nav');
+        mobileMenu = document.querySelector('.mobile-nav'),
+        closeButton = document.querySelector('.close');
 
   // Burger menu and side menu toggle
   burger.addEventListener('click', function(e) {
@@ -18,6 +19,15 @@
 
     this.classList.toggle('is-open');
     mobileMenu.classList.toggle('is-open');
+  }, false);
+
+  // Close button
+  closeButton.addEventListener('click', function(e){
+    e.preventDefault();
+
+    mobileMenu.classList.remove('is-open');
+    burger.classList.remove('is-open');
+
   }, false);
 
   // Listen for all clicks on the document
